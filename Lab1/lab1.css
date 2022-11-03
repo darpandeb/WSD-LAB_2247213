@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Nunito:ital,wght@1,200&display=swap');
+.head
+{
+    font-family: 'Monoton', cursive;
+}
+.brand
+{
+    font-family: 'Monoton', cursive; 
+}
+.jumbotron
+{
+    text-align: center;
+    background-color: #001bb7; 
+    color: #ffffff;
+    padding: 2%;
+    font-family:monospace;
+}
+.image
+{
+    height: 150px;
+    width: 150px;
+}
+.back
+{
+    background-image: url("./1228014.png");
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  .card:hover
+{
+    transform: scale(1.05);
+}
+.card{
+   box-shadow: 4px 5px 16px rgb(249, 63, 63);
+}
+.nav
+{
+    background-color: #001bb7; 
+    color: #ffffff;
+}
