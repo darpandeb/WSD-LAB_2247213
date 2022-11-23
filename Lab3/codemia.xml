@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="codemia.xsl" type="text/xsl"?>
+<codemia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="codemia.xsd">
+    <chat>
+        <userid>1213</userid>
+        <username>Test1User</username>
+        <userpass>test1234</userpass>
+        <status>Online</status>
+        <friends>32</friends>
+        <lastseen>2021-12-30T09:00:00</lastseen>
+        <frequentchat>Test2User</frequentchat>
+        <mode>business</mode>
+    </chat>
+    <chat> 
+        <userid>1214</userid>
+        <username>Test3User</username>
+        <userpass>test5678</userpass>
+        <status>Online</status>
+        <friends>12</friends>
+        <lastseen>2022-12-30T10:00:00</lastseen>
+        <frequentchat>Test4User</frequentchat>
+        <mode>business</mode>
+    </chat>
+    <chat> 
+        <userid>1215</userid>
+        <username>Debanjan</username>
+        <userpass>deb2121</userpass>
+        <status>Offline</status>
+        <friends>100</friends>
+        <lastseen>2022-10-31T10:00:40</lastseen>
+        <frequentchat>Ayushya</frequentchat>
+        <mode>private</mode>
+    </chat>
+    <chat> 
+        <userid>1216</userid>
+        <username>Darpan</username>
+        <userpass>dar3434</userpass>
+        <status>Online</status>
+        <friends>15</friends>
+        <lastseen>2002-06-24T23:05:00</lastseen>
+        <frequentchat>Rajarshi</frequentchat>
+        <mode>private</mode>
+    </chat>
+
+</codemia>
