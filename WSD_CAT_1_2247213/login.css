@@ -1,0 +1,60 @@
+.nav
+{
+    display: flex;
+    background-color: aquamarine;
+    box-shadow: 3px 4px 5px rgb(2, 126, 68);
+}
+.nav .left{
+    width: 80%;
+    margin-left: 2rem;
+}
+.nav .right
+{
+    width: 30%;
+    margin-left: 38rem;
+    padding-top: 20px;
+}
+a{
+    text-decoration: none;
+    font-size: 2rem;
+}
+ footer h2{
+    text-align: center;
+}
+.login
+{
+    margin-top: 120px;
+    margin-left: 12rem;
+    text-align: center;
+    width: 70%;
+    border: 1px solid grey;
+    box-shadow: 2px 3px 4px grey;
+    background-color: bisque;
+    margin-bottom: 5rem;
+    padding-bottom: 4rem;
+}
+input
+{
+    width: 45rem;
+    padding: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+textarea
+{
+    width: 47rem;
+}
+.submit
+{
+    padding: 1rem;
+    margin-bottom: 120px;
+    background-color: brown;
+    color: aliceblue;
+    box-shadow: 2px 3px 4px grey;
+}
+.save
+{
+    background-color: brown;
+    text-decoration: none;
+    color: white;
+}

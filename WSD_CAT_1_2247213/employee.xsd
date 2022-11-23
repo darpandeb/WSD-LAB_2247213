@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="company">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="employee" minOccurs="1" maxOccurs="5"> 
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="empid" type="xs:integer"/>
+                        <xs:element name="empname" type="xs:string"/>
+                        <xs:element name="empage" type="xs:integer"/>  
+                        <xs:element name="empsalary">
+                          <xs:simpleType>
+                                 <xs:restriction base="xs:integer">
+                                    <xs:minInclusive value="50000" />
+                                    <xs:maxInclusive value="200000" />
+                              </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                        <xs:element name="empmail" type="xs:string"/>
+                        <xs:element name="empphn" type="xs:integer"/>
+                        <xs:element name="empdesg" type="xs:string"/>
+                        <xs:element name="promo" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>  
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>
