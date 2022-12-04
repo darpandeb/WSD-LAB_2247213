@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <title>Form Validation</title>
+    <script src="./valid.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Nunito:ital,wght@1,200&display=swap');
+        .codemia
+        {
+            font-family: 'Monoton', cursive;
+            font-size: 1.7rem;
+            padding-left: 0.6rem;
+            padding-right: 1rem;
+        }
+        .back
+        {
+            background-image: url("https://images.unsplash.com/photo-1551651056-2cb4d5c104be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding-top: 5rem;
+
+        }
+        .box
+        {
+            background-color: white;
+            box-shadow: 2px 4px 15px rgb(40, 40, 40);
+            padding-top: 3rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            padding-bottom: 3rem;
+        }
+        .eye
+        {
+            padding : 3px;
+            padding-left: 9px;
+            padding-right: 9px;
+        }
+        .help
+        {
+            cursor: pointer;
+        }
+        #fname_msg{
+            display: none;
+            color: red;
+        }
+        #lname_msg{
+            display: none;
+            color: red;
+        }
+        #email_msg{
+            display: none;
+            color: red;
+        }
+        #phn_msg{
+            display: none;
+            color: red;
+        }
+        #pass_msg{
+            display: none;
+            color: red;
+        }
+        #cnfpass_msg{
+            display: none;
+            color: red;
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark" style="background-color: #031d30;">
+        <div class="container-fluid">
+          <a class="navbar-brand codemia" href="#text">
+            Codemia
+          </a>
+          <ul class="nav navbar-nav">
+            <li class="nav-item help" style="color: white;">Help <i class="bi bi-info-circle-fill"></i></li>    
+            </ul>
+        </div>
+      </nav>
+   
+        <div class="conatiner-fluid back">
+                <div class="row justify-content-center py-5 ">
+                    <div class="col-10 col-sm-10 xol-md-8 col-lg-6 box rounded">
+                        <h1>User Registration</h1>
+                        <h6>Validation</h6>
+                        <br>
+                        <label class="form-label"> Name </label>
+                        <div >
+                            <input id="fname" type="text" class="form-control" placeholder="eg : Darpan">
+                            <span id="fname_msg">Fill the First name</span>
+                            <br>
+                            <input id="lname" type="text" class="form-control" placeholder="eg : Deb">
+                            <span id="lname_msg">Fill the Last name</span>
+                        </div>
+                        <br/>
+                        <div class="mb-3">
+                            <label  class="form-label">Email address</label>
+                            <input id ="email" type="email" class="form-control" placeholder=" eg : name@example.com">
+                            <span id ="email_msg">Enter email</span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">
+                                Phone Number
+                            </label>
+                            <input id="phn" class="form-control" type="number" placeholder="eg : 9954893212">
+                            <span id ="phn_msg">Enter phone</span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">
+                                Password 
+                                <button type="button" class="btn btn-dark eye" onclick="visibility()"><i class="bi bi-eye-fill"></i></button>
+                            </label>
+                            <input class="form-control" type="password" id="pass">
+                            <span id ="pass_msg">Enter password</span>
+                            
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">
+                                Confirm Password
+                            </label>
+                            <input  id ="cnf_pass" class="form-control" type="password">
+                            <span id ="cnfpass_msg">Enter password</span>
+                        </div>
+                        <button type="submit" class="btn btn-outline-success col-12 my-5" onclick="validate()">Submit</button>
+                    
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h6 style="text-align: center;">&copy;Darpan Deb 2247213</h6>
+
+    
+</body>
+</html>
