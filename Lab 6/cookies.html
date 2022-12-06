@@ -43,8 +43,7 @@
             padding-right: 2rem;
         }
         #ShowC{
-            padding: 1rem;
-            background-color: bisque;
+          
             font-family: monospace;
         }
     </style>
@@ -54,7 +53,7 @@
  
             // Using cookie property
             cookieVal = document.cookie.name.value ;
-            document.cookie = "name = " + cookieVal;
+            document.cookie = "name = " + cookieVal+"; path=/;";
         }
  
         // Function to reading cookies
@@ -64,6 +63,9 @@
             // the "showCookies" button
             document.getElementById("ShowC").innerHTML =
               ("Hello " + cookieVal + ", We welcome you to our website");
+        }
+        function DelCookies() {
+            document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         }
     </script>
 </head>
@@ -90,12 +92,13 @@
                         <br>
                         <br>
              
-                        <button type="button" class="btn btn-danger" 
+                        <button type="button" class="btn btn-info" 
                                onclick="setCookies();">Set</button>
-             
                         <button type="button" class="btn btn-success"
                                onclick="showCookies();">Show</button>
-                            </div>
+                        <button type="button" class="btn btn-danger"
+                               onclick="DelCookies();">Delete</button>
+                        </div>
                     </form>
                     <br>
                     <span id="ShowC">Hii User</span>
