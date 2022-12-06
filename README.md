@@ -8,5 +8,6 @@ Web Stack Development Lab assigments Repository
 - CAT 1 
 - LAB4
 - LAB5
+- LAB6
 
 
