@@ -48,24 +48,31 @@
         }
     </style>
     <script type="text/javascript">
-        // Function to setting cookies
+        
         function setCookies() {
  
-            // Using cookie property
+            
             cookieVal = document.cookie.name.value ;
             document.cookie = "name = " + cookieVal+"; path=/;";
         }
- 
-        // Function to reading cookies
+
         function showCookies() {
  
-            // Display the cookie value when pressing
-            // the "showCookies" button
-            document.getElementById("ShowC").innerHTML =
+            if(cookieVal!="")
+            {
+                document.getElementById("ShowC").innerHTML =
               ("Hello " + cookieVal + ", We welcome you to our website");
+            }
+            else
+            {
+                document.getElementById("ShowC").innerHTML = "Cookies are deleted! Press Set to set cookies again";
+            }
+            
         }
         function DelCookies() {
+            cookieVal="";
             document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            alert("Cookie Deleted! ");
         }
     </script>
 </head>
