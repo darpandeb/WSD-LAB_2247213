@@ -23,7 +23,7 @@
             padding: 0;
             margin: 0;
         }
-        body{
+        #body1{
             background-image: linear-gradient(120deg,rgb(124, 0, 0), rgb(191, 4, 4),grey,white);
             background-repeat: no-repeat;
             background-size: cover;
@@ -48,12 +48,13 @@
         }
     </style>
     <script type="text/javascript">
+        console.log(document.cookie)
         
         function setCookies() {
- 
-            
-            cookieVal = document.cookie.name.value ;
-            document.cookie = "name = " + cookieVal+"; path=/;";
+            cookieVal = document.getElementById('name').value ;
+            console.log(cookieVal)
+            document.cookie = "name=" + cookieVal+";";
+            console.log(document.cookie)
         }
 
         function showCookies() {
@@ -65,24 +66,28 @@
             }
             else
             {
-                document.getElementById("ShowC").innerHTML = "Cookies are deleted! Press Set to set cookies again";
+                alert("Cookies are not available! Set a cookie first!");
             }
+           
             
         }
         function DelCookies() {
-            if(cookieVal!="")
+        if(cookieVal!="")
         {
             cookieVal="";
-            document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.getElementById("name").value="";
+            document.cookie = "name="+cookieVal+";expires=Thu,01 Jan 1970 00:00:00 UTC;";
             alert("Cookie Deleted! ");
+            document.getElementById("ShowC").innerHTML = "Cookies are deleted! Press Set to set cookies again";
         }
         else{
             alert("Cookie Already Deleted! ");
         }
     }
+    
     </script>
 </head>
-<body>
+<body id="body1">
     <nav class="navbar navbar-dark" style="background-color: #031d30;">
         <div class="container-fluid">
           <a class="navbar-brand codemia" href="#text">
@@ -98,10 +103,10 @@
         <div class="row justify-content-center">
             <div class="col-6 box">
                     <h3>Codemia Interactive Box</h3>
-                    <form action="" name="cookie">
+                    <form action="" name="cookieForm">
                         <div class="form-group">
                         <label class="form-label">Name : </label>
-                        <input type="text" class="form-control" name="name" placeholder="eg : Darpan"/>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="eg : Darpan"/>
                         <br>
                         <br>
              
@@ -112,6 +117,8 @@
                         <button type="button" class="btn btn-danger"
                                onclick="DelCookies();">Delete</button>
                         </div>
+                        
+                        
                     </form>
                     <br>
                     <span id="ShowC">Hii User</span>
