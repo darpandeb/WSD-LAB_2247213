@@ -1,4 +1,5 @@
-function visibility() {
+function visibility() 
+{
     var x = document.getElementById("pass");
     console.log(x.type);
     if (x.type == "password") {
@@ -7,17 +8,24 @@ function visibility() {
       x.type = "password";
     }
 }
+// REGEX Check //
 function containsNumbers(str) {
     return /\d/.test(str);
   }
 function checkemail(str)
 {
-    return /[a-z A-Z 0-9 _]*[@][a-z]*[.][a-z]*/gm.match(str);
+    return /[a-z A-Z 0-9 _]*[@][a-z]*[.][a-z]*/gm.test(str);
 }
 function checkphn(str)
 {
-    return /^[0-9]{10}$/gm.match(str);
+    return /^[0-9]{10}$/gm.test(str);
 }
+function checkpass(str)
+{
+        return /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(str);
+}
+
+// Validate REGEX //
 function checkname()
 {
     var x = document.getElementById("fname");
@@ -67,14 +75,15 @@ function email()
     }
     else if(checkemail(e.value.trim()))
     {
-        document.getElementById("email_msg").style.display = "block";
-        document.getElementById("email_msg").innerHTML ="Email is not valid"
-        document.getElementById("email").style.border = "2px solid red";
+        
+        document.getElementById("email").style.border = "1px solid lightgrey"
+        document.getElementById("email_msg").style.display = "none";
     }
     else
     {
-        document.getElementById("email").style.border = "1px solid lightgrey"
-        document.getElementById("email_msg").style.display = "none";
+        document.getElementById("email_msg").style.display = "block";
+        document.getElementById("email_msg").innerHTML ="Email is not valid"
+        document.getElementById("email").style.border = "2px solid red";
     }
 }
 function phn()
@@ -85,8 +94,9 @@ function phn()
         document.getElementById("phn_msg").style.display = "block";
         document.getElementById("phn").style.border = "2px solid red";
     }
-    else if(checkphn(e.value.trim()))
+    else if(!checkphn(e.value))
     {
+        
         document.getElementById("phn_msg").style.display = "block";
         document.getElementById("phn_msg").innerHTML ="Phone number is not valid"
         document.getElementById("phn").style.border = "2px solid red";
@@ -97,11 +107,7 @@ function phn()
         document.getElementById("phn_msg").style.display = "none";
     }
 }
-function checkpass(str)
-    {
-        var pass = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-        return pass.match(str);
-    }
+
 function pasword()
 {
     var p = document.getElementById("pass");
@@ -110,7 +116,7 @@ function pasword()
         document.getElementById("pass_msg").style.display = "block";
         document.getElementById("pass").style.border = "2px solid red";
     }
-    else if(pass(p.value.trim()))
+    else if(!checkpass(p.value.trim()))
     {
         document.getElementById("pass_msg").style.display = "block";
         document.getElementById("pass_msg").innerHTML ="Password number is not valid"
@@ -126,10 +132,17 @@ function pasword()
 function cnf_pass()
 {
     var p = document.getElementById("cnf_pass");
+    var mp = document.getElementById("pass");
     if(p.value.trim()=="")
     {
         document.getElementById("cnfpass_msg").style.display = "block";
         document.getElementById("cnf_pass").style.border = "2px solid red";
+    }
+    else if(p.value!=mp.value)
+    {
+        document.getElementById("cnfpass_msg").style.display = "block";
+        document.getElementById("cnf_pass").style.border = "2px solid red";
+        document.getElementById("cnfpass_msg").innerHTML ="Password not matching";
     }
 }
 
