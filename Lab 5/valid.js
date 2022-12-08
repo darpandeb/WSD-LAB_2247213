@@ -144,6 +144,10 @@ function cnf_pass()
         document.getElementById("cnf_pass").style.border = "2px solid red";
         document.getElementById("cnfpass_msg").innerHTML ="Password not matching";
     }
+    else{
+        document.getElementById("cnf_pass").style.border = "1px solid lightgrey"
+        document.getElementById("cnfpass_msg").style.display = "none";
+    }
 }
 
 function validate()
