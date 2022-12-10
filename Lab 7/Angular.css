@@ -2,7 +2,7 @@
 #Datum
 {
         
-
+        box-shadow: 2px 4px 16px grey;
         font-family: Arial, Helvetica, sans-serif;
         border-collapse: collapse;
         width: 100%;
@@ -20,7 +20,7 @@
 #Datum tr:nth-child(even){background-color: #f2f2f2;}
 
 #Datum tr:hover {
-    background-color: #ddd;
+    background-color: rgb(196, 247, 213);
     cursor: pointer;
 }
 
@@ -35,4 +35,29 @@
 *{
     padding: 0;
     margin: 0;
+}
+.back
+{
+    background-image: url("https://images.unsplash.com/photo-1668356352028-8a7e695e3bfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80");
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+}
+.label
+{
+    background-color: rgb(193, 193, 193);
+    border: none;
+    color: black;
+    margin-right: 12px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: -3px 5px 6px rgb(0, 0, 0) ;
+}
+.message
+{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 2rem;
+    box-shadow: 3px 4px 12px rgb(76, 1, 1);
+    border-radius: 5px;
 }

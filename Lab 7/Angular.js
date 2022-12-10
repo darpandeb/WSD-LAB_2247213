@@ -1,4 +1,18 @@
-angular.module('myApp', []).controller('namesCtrl', function($scope) {
+var app = angular.module('myApp', []);
+app.filter('evenage', function() {
+    return function(x) {
+        var i, c, txt = "";
+        for (i = 0; i < x.length; i++) {
+            c = x[i];
+            if (i % 2 == 0) {
+                c = c.toUpperCase();
+            }
+            txt += c;
+        }
+        return txt;
+    };
+});
+app.module('myApp', []).controller('namesCtrl', function($scope) {
     $scope.datum = [
         {id:902121,name:"Darpan",location:"Guwahati",age:21,gender:"M",interest:"CompetitiveProgramming"},
         {id:902122,name:"Debanjan",location:"Kolkata",age:25,gender:"M",interest:"Iot"},
