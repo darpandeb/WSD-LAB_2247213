@@ -34,18 +34,12 @@
                     <input type="text" class="form-control" placeholder="Search by any field" ng-model="test.$">
                     <input type="text" class="form-control" placeholder="Seacrh by name" ng-model="test.name">
                   </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Age" id="even" ng-model="test.age">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="Age" id="even" ng-model="evenage.age" unchecked>
                     <label class="form-check-label" for="flexRadioDefault1">
-                      Default radio
+                      Even Age
                     </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Age" id="odd">
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      Default checked radio
-                    </label>
-                  </div>
+                </div>
             </div>
         </div>
      </div>
@@ -64,14 +58,22 @@
                             <th>Interest</th>
 
                         </tr>
+                        <!--<tr ng-repeat="n in datum | filter:evenage">
+                          <td>{{n.id}}</td>
+                          <td>{{ n.name | evenage}}</td>
+                          <td>{{ n.location}}</td>
+                          <td>{{ n.age}}</td>
+                          <td>{{ n.gender}}</td>
+                          <td>{{ n.interest}}</td>
+                        </tr>-->
                         <tr ng-repeat="names in datum | filter:test">
-                          <td>{{names.id}}</td>
-                          <td>{{ names.name}}</td>
-                          <td>{{ names.location}}</td>
-                          <td>{{ names.age}}</td>
-                          <td>{{ names.gender}}</td>
-                          <td>{{ names.interest}}</td>
-                        </tr>
+                            <td>{{names.id}}</td>
+                            <td>{{ names.name}}</td>
+                            <td>{{ names.location}}</td>
+                            <td>{{ names.age}}</td>
+                            <td>{{ names.gender}}</td>
+                            <td>{{ names.interest}}</td>
+                          </tr>
                       </table>
                       <h4 class="message"ng-show="(datum |filter:test).length == 0"> Oopss no result found :(</h4>
                 </div>
