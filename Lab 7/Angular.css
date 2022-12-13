@@ -63,3 +63,8 @@
     border-radius: 5px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+#custom
+{
+    font-family: monospace;
+    margin-bottom: -1px;
+}

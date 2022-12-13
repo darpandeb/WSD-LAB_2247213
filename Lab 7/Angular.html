@@ -34,10 +34,16 @@
                     <input type="text" class="form-control" placeholder="Search by any field" ng-model="test.$">
                     <input type="text" class="form-control" placeholder="Seacrh by name" ng-model="test.name">
                   </div>
+                  <p id="custom">Custom Filter</p>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="Age" id="even" ng-model="evenage.age" unchecked>
-                    <label class="form-check-label" for="flexRadioDefault1">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
+                    <label class="form-check-label">
                       Even Age
+                    </label>
+                    <br>
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled1" checked disabled>
+                    <label class="form-check-label">
+                      GenderDetect
                     </label>
                 </div>
             </div>
@@ -56,22 +62,13 @@
                             <th>Age</th>
                             <th>Gender</th>
                             <th>Interest</th>
-
                         </tr>
-                        <!--<tr ng-repeat="n in datum | filter:evenage">
-                          <td>{{n.id}}</td>
-                          <td>{{ n.name | evenage}}</td>
-                          <td>{{ n.location}}</td>
-                          <td>{{ n.age}}</td>
-                          <td>{{ n.gender}}</td>
-                          <td>{{ n.interest}}</td>
-                        </tr>-->
                         <tr ng-repeat="names in datum | filter:test">
                             <td>{{names.id}}</td>
                             <td>{{ names.name}}</td>
                             <td>{{ names.location}}</td>
-                            <td>{{ names.age}}</td>
-                            <td>{{ names.gender}}</td>
+                            <td>{{ names.age | evenage}}</td>
+                            <td>{{ names.gender | genderdetect}}</td>
                             <td>{{ names.interest}}</td>
                           </tr>
                       </table>

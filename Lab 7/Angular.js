@@ -1,17 +1,35 @@
 var app = angular.module('myApp', []);
-app.filter('evenage', function() {
-    return function(x) {
-        var i, c, txt = "";
-        for (i = 0; i < x.name.length; i++) {
-            c = x.name[i];
-            if (i % 2 == 0) {
-                c = c.toUpperCase();
+app.filter('evenage', function()
+{
+    return function(text) {
+        let txt = '';
+            text = text || '';
+            if(text%2==0){
+                txt = text+" ✅"
             }
-            txt += c;
+            else{
+                txt = text+" ❌"
+            }
+            return txt;
         }
-        return txt;
-    };
-});
+        
+    });
+
+app.filter('genderdetect', function()
+{
+    return function(text) {
+        let txt = '';
+            text = text || '';
+            if(text=='M'){
+                txt = text+" 🙋🏻‍♂️"
+            }
+            else{
+                txt = text+" 🙋🏻‍♀️"
+            }
+            return txt;
+        }
+        
+    });
 app.controller('namesCtrl', function($scope) {
     $scope.datum = [
         {id:902121,name:"Darpan",location:"Guwahati",age:21,gender:"M",interest:"CompetitiveProgramming"},
@@ -25,3 +43,4 @@ app.controller('namesCtrl', function($scope) {
         {id:902129,name:"Dishanth",location:"Bengaluru",age:35,gender:"M",interest:"DataScience"}
     ];
 });
+
