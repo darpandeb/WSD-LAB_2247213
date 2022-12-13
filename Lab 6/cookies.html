@@ -24,7 +24,7 @@
             margin: 0;
         }
         #body1{
-            background-image: linear-gradient(120deg,rgb(124, 0, 0), rgb(191, 4, 4),grey,white);
+            background-image: linear-gradient(120deg,rgb(124, 0, 0), #ff0000,grey,white);
             background-repeat: no-repeat;
             background-size: cover;
             padding-bottom: 3rem;
@@ -48,13 +48,12 @@
         }
     </style>
     <script type="text/javascript">
-        console.log(document.cookie)
         
         function setCookies() {
             cookieVal = document.getElementById('name').value ;
-            console.log(cookieVal)
+            console.log(cookieVal);
             document.cookie = "name=" + cookieVal+";";
-            console.log(document.cookie)
+            console.log(document.cookie);
         }
 
         function showCookies() {
@@ -83,6 +82,12 @@
         else{
             alert("Cookie Already Deleted! ");
         }
+    }
+    function set_bgcolor() {
+        var bg= document.getElementById("bgcolor").value;
+        console.log(bg);
+        document.cookie = "bgcolor="+bg+";";
+        document.getElementById("body1").style.backgroundImage = "linear-gradient(120deg,"+bg+",grey,white)";
     }
     
     </script>
@@ -116,6 +121,11 @@
                                onclick="showCookies();">Show</button>
                         <button type="button" class="btn btn-danger"
                                onclick="DelCookies();">Delete</button>
+                        <br/>
+                        <br/
+                        <label class="form-label">Set Color : </label>
+                        <input type="color" class="form-control form-control-color" 
+                        value="#ff0000"id="bgcolor" onchange="set_bgcolor();">
                         </div>
                         
                         
