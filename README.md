@@ -1,5 +1,5 @@
 # Web Stack Development
-## CHIRST Deemed to be University 
+## CHRIST Deemed to be University 
 ### Master Of Computer Applications
 Web Stack Development Lab assigments Repository
 
