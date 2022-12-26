@@ -1,4 +1,6 @@
-# WSD-LAB_2247213
+# Web Stack Development
+## CHRIST Deemed to be University 
+### Master Of Computer Applications
 Web Stack Development Lab assigments Repository
 
 ## Completed Commits
