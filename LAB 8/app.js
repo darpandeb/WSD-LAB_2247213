@@ -1,27 +1,28 @@
 
 var app = angular.module('myApp', ['ngRoute']);
 app.controller('FirstController', function($scope) {
-    $scope.message = 'Hello from FirstController';
+    $scope.message = 'Hello from Main Controller';
     });
 app.config(function($routeProvider) {
     $routeProvider
      
     .when('/', {
-    templateUrl : 'pages/first.html',
+    templateUrl : 'first.html',
     controller : 'FirstController'
     })
      
     .when('/blog', {
-    templateUrl : 'pages/second.html',
+    templateUrl : 'second.html',
     controller : 'SecondController'
     })
      
     .when('/about', {
-    templateUrl : 'pages/third.html',
+    templateUrl : 'third.html',
     controller : 'ThirdController'
     })
      
-    .otherwise({redirectTo: '/'});
+//     .otherwise({redirectTo: '/'});
+    
     });
 
 app.controller('FirstController', function($scope) {

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJsMergeAngular</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src ="app.js"></script>
+
+</head>
+<body ng-controller ="myCltr">
+ <table cellpadding="2" cellspacing="2" width="100%" border="1">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>location</th>
+        <th>age</th>
+        <th>gender</th>
+        <th>interest</th>
+    </tr>
+    <tr ng-repeat ="i in names">
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.location}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.gender}}</td>
+        <td>{{i.interest}}</td>
+
+        
+    </tr>
+ </table>
+    
+</body>
+</html>

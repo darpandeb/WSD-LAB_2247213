@@ -5,24 +5,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
 </head>
 <body>
-<script type="text/ng-template" id="pages/first.html">
-<h1>First</h1>
-<h3>{{message}}</h3>
-</script>
-<script type="text/ng-template" id="pages/second.html">
-<h1>Second</h1>
-<h3>{{message}}</h3>
-</script>
-<script type="text/ng-template" id="pages/third.html">
-<h1>Third</h1>
-<h3>{{message}}</h3>
-</script>
-
 <a href="#/">First</a>
-<a href="#/second">Second</a>
-<a href="#/third">Third</a>
+<a href="#blog">Second</a>
+<a href="#about">Third</a>
 
-<div ng-view></div>
+<ng-view>
+    
+</ng-view>
 
 <script src="app.js"></script>
 </body>
