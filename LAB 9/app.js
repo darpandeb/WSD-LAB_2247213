@@ -1,4 +1,4 @@
-// defining the essential variables//
+// defining the essential variables and modules//
 
 const http = require('http');
 const {load}= require('./data.js');
@@ -11,6 +11,12 @@ app.use(cors(
         origin: "*"
     }
 ));
+var data = load();
+//console.log(data.data);
+// filter out records whose age is greater than 25
+checkUsers = data.data.filter(d => d.age >= 25);
+//console.log(checkUsers);
+
 // get request//
 app.get('/',(req,res)=>
 {
@@ -18,8 +24,13 @@ app.get('/',(req,res)=>
 });
 app.get('/data',(req,res)=>
 {
-    res.send(load());
+    res.send(data.data);
 });
+app.get('/age25',(req,res)=>
+{
+    res.send(checkUsers);
+});
+
 
 // listen to PORT//
 app.listen(PORT,()=>
