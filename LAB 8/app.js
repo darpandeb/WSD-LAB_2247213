@@ -11,12 +11,12 @@ app.config(function($routeProvider) {
     controller : 'FirstController'
     })
      
-    .when('/blog', {
+    .when('/records', {
     templateUrl : 'second.html',
     controller : 'SecondController'
     })
      
-    .when('/about', {
+    .when('/table', {
     templateUrl : 'third.html',
     controller : 'ThirdController'
     })
@@ -36,3 +36,11 @@ app.controller('SecondController', function($scope) {
 app.controller('ThirdController', function($scope) {
         $scope.message = 'Hello from ThirdController';
         });
+
+app.controller('myCtrl', function($scope, $http) {
+    $http.get("https://darpandeb.github.io/WSD-LAB_2247213/data.json")
+    .then(function(response) {
+            $scope.jsondata = response.data.data;
+        });
+});
+// jSON link : https://darpandeb.github.io/WSD-LAB_2247213/data.json//

@@ -5,8 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Third</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .back
+        {
+            background-image: url("https://images.unsplash.com/photo-1668356352028-8a7e695e3bfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80");
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.7;
+        }
+        .label
+        {
+            background-color: rgb(193, 193, 193);
+            border: none;
+            color: black;
+            margin-right: 12px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            box-shadow: -3px 5px 6px rgb(0, 0, 0) ;
+        }
+        .card
+        {
+            width:18rem;
+        }
+        .data
+        {
+            margin-top: 25px;
+        }
+        .message
+        {
+            background-color: rgb(255, 0, 0);
+            color: white;
+            padding: 2rem;
+            box-shadow: 3px 4px 12px rgb(76, 1, 1);
+            border-radius: 5px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Hi3</h1>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <div class="container-fluid ">
+           <div class="row back justify-content-center align-items-center">
+               <div class="col-10">
+                   <div class="input-group mb-3">
+                       <label class="form-control label">Search Records  </label>
+                       <input type="text" class="form-control" placeholder="Search by any field" ng-model="test.$">
+                       <input type="text" class="form-control" placeholder="Seacrh by name" ng-model="test.name">
+                     </div>
+               </div>
+           </div>
+        </div>
+           <div class="container">
+               <div class="row justify-content-center">
+                   <div class="col-10">
+                       <h3 style="margin-top: 2rem; background-color: rgb(125, 255, 144);
+                       padding: 1rem; padding-right:4rem ; border-radius: 5px; box-shadow: -9px 4px 15px grey;">Codemia Interest Records :</h3>
+                    <div class="row g-4 data" >
+                        <div class="col"ng-repeat="names in jsondata | filter:test">
+                          <div class="card" style="background-color: rgb(179, 208, 255); box-shadow: 1px 2px 7px rgb(48, 48, 48);" >
+                            <div class="card-body">
+                              <button type="button" class="btn btn-danger" style="margin-bottom:10px;">{{names.id}}</button>
+                              <h5 class="card-title" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">{{names.name}}</h5>
+                              <p class="card-text">{{names.interest}}</p>
+                            </div>
+                          </div>
+                          <h4 class="message" ng-show="(jsondata |filter:test).length == 0"> Oopss no result found :(</h4>
+                        </div>
 </body>
 </html>

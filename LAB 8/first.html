@@ -4,10 +4,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First</title>
+    <title>Home</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        #bg
+        {
+            height: 500px;
+            background-image: url("https://images.unsplash.com/photo-1544594376-0a9a6ae2c997?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3003&q=80");
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+        #bg h1{
+            text-align: center;
+            color: white;
+            padding-top: 100px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        #bg input
+        {
+            width: 50%;
+            text-align: center;
+            margin-left: 350px;
+            justify-content: center;
+        }
+        #content
+        {
+            height: 300px;
+            background-color: rgb(255, 255, 255);
+            padding : 2px 0 14px 0;
+            margin-bottom: 2px;
+        }
+        #content h1{
+            text-align: center;
+           
+        }
+        #icons
+        {
+            display: flex;
+            justify-content: center;
+        }
+        .icons
+        {
+            font-size: 150px;
+            padding : 0 12px 0 12px;
+        }
+        #foot
+        {
+            margin-top: 50px;
+            background-color: aquamarine;
+            height: 50px;
+            padding: 15px 0 ;
+            text-align: center;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Hi</h1>
+   <div class="container-fluid" id="bg">
+     <h1>Welcome to Codemia</h1>
+    <input type="text" class="form-control" placeholder="Search"/>
+   </div>
+   <div class="container-fluid" id="content">
+      <h1 style="padding-top: 14px;"> We Provide you with </h1>
+      <div id="icons">
+        <i class="bi bi-award-fill icons"></i>
+        <i class="bi bi-calendar3 icons"></i>
+        <i class="bi bi-hourglass-split icons"></i>
+      </div>
+      <h1>Timely and Accurate solutions</h1>
+
+   </div>
+   <br>
+   <div class="container-fluid" id="foot">
+       <h3>&copy; Darpan Deb</h3>
+   </div>
+ 
     
 </body>
 </html>
