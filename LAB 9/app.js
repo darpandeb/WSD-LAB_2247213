@@ -11,6 +11,7 @@ app.use(cors(
         origin: "*"
     }
 ));
+var path = require('path');
 var data = load();
 //console.log(data.data);
 // filter out records whose age is greater than 25
@@ -20,7 +21,7 @@ checkUsers = data.data.filter(d => d.age >= 25);
 // get request//
 app.get('/',(req,res)=>
 {
-    res.send('<h1>Landing Page</h1><h3>Hello from NodeJs</h3>');
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 app.get('/data',(req,res)=>
 {

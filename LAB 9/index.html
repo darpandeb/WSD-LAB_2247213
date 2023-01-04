@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Nunito:ital,wght@1,200&display=swap');
+#Datum
+{
+        
+        box-shadow: 2px 4px 16px grey;
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+
+}
+#Datum td, #Datum th {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+#Datum th {
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: rgb(33, 33, 206);
+    color: rgb(255, 255, 255);
+}
+#Datum tr:nth-child(even){background-color: #f2f2f2;}
+
+#Datum tr:hover {
+    background-color: rgb(196, 247, 213);
+    cursor: pointer;
+}
+
+
+.codemia
+{
+    font-family: 'Monoton', cursive;
+    font-size: 1.7rem;
+    padding-left: 0.6rem;
+    padding-right: 1rem;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.back
+{
+    background-image: url("https://images.unsplash.com/photo-1668356352028-8a7e695e3bfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80");
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+}
+.label
+{
+    background-color: rgb(193, 193, 193);
+    border: none;
+    color: black;
+    margin-right: 12px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: -3px 5px 6px rgb(0, 0, 0) ;
+}
+.message
+{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 2rem;
+    box-shadow: 3px 4px 12px rgb(76, 1, 1);
+    border-radius: 5px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+#custom
+{
+    font-family: monospace;
+    margin-bottom: -1px;
+}
+    </style>
+</head>
+<body>
+        <div ng-app="myApp" ng-controller="myCtrl">
+         <div class="container-fluid ">
+            <div class="row back justify-content-center align-items-center">
+                <div class="col-10">
+                    <div class="input-group mb-3">
+                        <label class="form-control label">Search Records  </label>
+                        <input type="text" class="form-control" placeholder="Search by any field" ng-model="test.$">
+                        <input type="text" class="form-control" placeholder="Seacrh by name" ng-model="test.name">
+                      </div>
+                </div>
+            </div>
+         </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <h3 style="margin-top: 2rem; background-color: rgb(255, 255, 255);
+                        padding: 1rem; padding-right:4rem ; border-radius: 5px; box-shadow: -9px 4px 15px grey;">Codemia Customer Records :</h3>
+                        <table id="Datum" class="table-responsive">
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Location</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Interest</th>
+                            </tr>
+                            <tr ng-repeat="names in jsondata | filter:test">
+                                <td>{{names.id}}</td>
+                                <td>{{ names.name}}</td>
+                                <td>{{ names.location}}</td>
+                                <td>{{ names.age }}</td>
+                                <td>{{ names.gender }}</td>
+                                <td>{{ names.interest}}</td>
+                              </tr>
+                          </table>
+                          <h4 class="message"ng-show="(jsondata |filter:test).length == 0"> Oopss no result found :(</h4>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <hr/>
+        <center><h5>&copy; Darpan Deb</h5></center>
+</body>
+</html>
