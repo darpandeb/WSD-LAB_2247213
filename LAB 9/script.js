@@ -1,3 +1,4 @@
+// Js script to write data on the json file on server side using Fs node  module
 const fs = require("fs");
    
 
@@ -7,7 +8,6 @@ fs.readFile("data.json", function(err, data) {
    
     const users = JSON.parse(data);
       
-    console.log(users); 
 });
 
 
@@ -16,12 +16,12 @@ fs.readFile("data.json", function(err, data) {
 const users = require("./data.json");
 
 let user = {
-    id:902129,
-    name:"Dishanth",
-    location:"Bengaluru",
+    id:902130,
+    name:"New User",
+    location:"New Location",
     age:35,
     gender:"M",
-    interest:"DataScience"
+    interest:"New Interest"
 };
 
 users.data.push(user);
@@ -30,5 +30,5 @@ fs.writeFile("users.json", JSON.stringify(users), err => {
      
     if (err) throw err; 
    
-    console.log("Done writing"); // Success
+    console.log("Done writing"); 
 });

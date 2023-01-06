@@ -17,11 +17,11 @@ var data = load();
 // filter out records whose age is greater than 25
 checkUsers = data.data.filter(d => d.age >= 25);
 //console.log(checkUsers);
-
+app.use(express.static(__dirname + '/'));
 // get request//
 app.get('/',(req,res)=>
 {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(__dirname+'/index.html');
 });
 app.get('/data',(req,res)=>
 {
