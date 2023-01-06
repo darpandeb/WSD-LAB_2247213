@@ -1,9 +1,9 @@
 var app = angular.module('myApp', []);
 
 app.controller('myCtrl', function($scope, $http) {
-    $http.get("https://darpandeb.github.io/WSD-LAB_2247213/LAB%209/users.json")
+    $http.get("http://localhost:3022/data")
     .then(function(response) {
-            $scope.jsondata = response.data.data;
+            $scope.jsondata = response.data;
             console.log($scope.jsondata)
         });
 });
