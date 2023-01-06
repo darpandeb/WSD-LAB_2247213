@@ -12,6 +12,9 @@ Web Stack Development Lab assigments Repository
 - LAB5
 - LAB6
 - LAB7
+- LAB8
+- LAB9
+- LAB10
 
 
 
