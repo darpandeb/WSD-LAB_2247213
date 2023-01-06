@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"> 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Monoton&family=Nunito:ital,wght@1,200&display=swap'); 
+        @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Nunito:ital,wght@1,200&display=swap');
+        body{
+             display: flex;
+             flex-direction:column;
+             }
+             .menu
+             {
+                padding: 2rem;
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+                display: flex;
+               justify-content: space-around;
+               background-color: rgb(26, 26, 26);
+             }
+             .menu a{
+                 font-size: 15px;
+                 font-weight: bolder;
+                 color:white;
+                 text-decoration: none;
+                 color : rgb(36, 36, 0);
+             }
+             .navbar-brand{
+                    font-family: 'Monoton', cursive;
+             }
+             .menu a:link{
+                background-color: #36d1f4;
+                color: white;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+             }
+             #poster
+             {
+                background-image: url('https://images.unsplash.com/photo-1645680827507-9f392edae51c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80');
+                height: 625px;
+                background-repeat: no-repeat;
+                background-size: 100% 625px;
+                opacity: 0.9;
+                text-align: center;
+             }
+
+            .codemia
+            {
+                font-family: 'Dancing Script', cursive;
+                margin-top: 24rem;
+                font-size: 9rem;
+                color: white;
+            }
+            .codemia1
+            {
+                color:white;
+                font-family: 'Dancing Script', cursive;
+                font-size: 2rem;
+            }
+
+             
+    </style>
+</head>
+<body>
+{{!-- <nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand " href="./">
+      Codemia
+    </a>
+  </div>
+</nav> --}}
+<div id="poster">
+   <h1 class="codemia">Codemia</h1>
+   <p class="codemia1">CRUD Operations on Mysql using NodeJs</p>
+</div>
+       <div class="menu">
+            <a href="/add">ADD Customers</a>
+            <a href="/search">SEARCH Customers</a>
+            <a href="/update">UPDATE Customers</a>
+            <a href="/delete">DELETE Customers</a>
+            <a href="/view">VIEW Customers</a>           
+       </div>
+</body>
+</html>
