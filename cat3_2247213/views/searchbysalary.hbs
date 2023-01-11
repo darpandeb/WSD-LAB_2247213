@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searchbydept</title>
+</head>
+<body>
+    <h1>Search BY Salary</h1>
+    <form action="/searchbysal1">
+            <input type="text" name="sal" id="sal" placeholder="EMP_SALARY">
+            <br>
+            <button type="submit" >Submit</button>
+    </form>
+   {{#if mesg}}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>DESG</th>
+            <th>DEPT</th>
+            <th>SALARY</th>
+            <th>LOCATION</th>
+        </tr>
+        {{#data}}
+        <tr>
+            <td>{{emp_id}}</td>
+            <td>{{emp_name}}</td>
+            <td>{{emp_designation}}</td>
+            <td>{{emp_dept}}</td>
+            <td>{{emp_salary}}</td>
+            <td>{{emp_loc}}</td>
+        </tr>
+        {{/data}}
+     {{/if}}
+
+       {{#if mesg1}} 
+            <h3>No data</h3>
+        {{/if}}
+     
+    </table>
+    <a href="./">Back</a>
+</body>
+</html>

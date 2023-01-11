@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete</title>
+</head>
+<body>
+    <h1>delete</h1>
+    <form action="/deleteuser">
+    <input type="text" name="id" id="id" placeholder="EMP_ID">
+    <button type="submit">Delete</button>
+    </form>
+    <a href="./">Back</a>
+
+    {{#if message}}
+    <p>Record found and deleted</p>
+    {{/if}}
+    {{#if message1}}
+    <p>Record not found and cannot be deleted</p>
+    {{/if}}
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+    <h1>Update</h1>
+    <form action="/updateuser">
+            <input type="text" name="id" id="id" placeholder="EMP_ID">
+            <br>
+            <button type="submit" >Submit</button>
+    </form>
+    {{#if mesg}}
+        {{#data}}
+        <h1>Data fetched....</h1>
+        <h1>Update the fields....</h1>
+        <form action="/updateduser">
+            <input type="text" name="id" id="id" value={{emp_id}}>
+            <input type="text" name="name" id="name" value={{emp_name}}>
+            <input type="text" name="desg" id="desg" value={{emp_designation}}>
+            <input type="text" name="dept" id="dept" value={{emp_dept}}>
+            <input type="number" name="salary" id="salary" value={{emp_salary}}>
+            <input type="text" name="loc" id="loc" value={{emp_loc}}>
+            <button type="submit">Submit</button>
+    </form>      
+        {{/data}}
+    {{/if}}
+    {{#if mesg1}}
+        <h1>Data doesnt exists for this ID....</h1>
+    {{/if}}
+
+    {{#if message}}
+    <h1>Data Updated</h1>
+    {{/if}}
+    <a href="./">Back</a>
+    
+</body>
+</html>

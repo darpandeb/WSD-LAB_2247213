@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+</head>
+<body>
+    <h1>Add</h1>
+    <form action="/adduser" onsubmit="validate()">
+    <input type="text" name="id" id="id" placeholder="EMP_ID">
+    <input type="text" name="name" id="name" placeholder="EMP_NAME">
+    <input type="text" name="desg" id="desg" placeholder="EMP_DESG">
+    <input type="text" name="dept" id="dept" placeholder="EMP_DEPT">
+    <input type="number" name="salary" id="salary" placeholder="EMP_SALARY">
+    <input type="text" name="loc" id="loc" placeholder="EMP_LOCATION">
+    <button type="submit">Submit</button>
+    </form>
+    <a href="./">Back to Index page</a>
+          {{#if mesg}}
+          <h3>Data Inserted</h3>
+          {{/if}}
+          {{#if mesg2}}
+          <h3>Data Already Exists</h3>
+          {{/if}}
+</body>
+<script type="text/javascript">
+    function validate()
+    { 
+        alert("This Validation function is working correctly");
+        //event.preventDefault();
+        checkid();
+        checkname();
+        checkdesg();
+        checkdept();
+        checksalary(); 
+        checkloc();
+        
+
+        
+
+        
+        
+                
+    }
+
+    function checkname()
+    {
+            var name = document.getElementById('name').value;
+            console.log(name.length)
+            if (/\d/.test(name))
+            {
+                document.getElementById('name').style.border = "1px solid red";
+                alert("Please enter a valid username");
+                event.preventDefault();
+            }
+            if(name.length==0)
+            {
+                document.getElementById('name').style.border = "1px solid red";
+                alert("Please enter a valid username");
+                event.preventDefault();
+            }
+    }
+function checksalary()
+    {
+            var sal = document.getElementById('salary').value;
+            if (sal.length==0)
+            {
+                document.getElementById('salary').style.border = "1px solid red";
+                alert("Please enter a valid salary");
+                event.preventDefault();
+            }
+    }
+    function checkid()
+    {
+            var id = document.getElementById('id').value;
+            if (id.length==0)
+            {
+                document.getElementById('id').style.border = "1px solid red";
+                alert("Please enter a valid id");
+                event.preventDefault();
+            }
+    }
+    function checkdesg()
+    {
+            var desg = document.getElementById('desg').value;
+            if (desg.length==0)
+            {
+                document.getElementById('desg').style.border = "1px solid red";
+                alert("Please enter a valid designation");
+                event.preventDefault();
+            }
+    }
+    function checkdept()
+    {
+            var dept = document.getElementById('dept').value;
+            if (dept.length==0)
+            {
+                document.getElementById('dept').style.border = "1px solid red";
+                alert("Please enter a valid Department");
+                event.preventDefault();
+            }
+    }
+    function checkloc()
+    {
+            var loc = document.getElementById('loc').value;
+            if (loc.length==0)
+            {
+                document.getElementById('loc').style.border = "1px solid red";
+                alert("Please enter a valid location");
+                event.preventDefault();
+            }
+    }
+    </script>
+</html>
